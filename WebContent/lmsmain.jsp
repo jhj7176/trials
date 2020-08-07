@@ -5,17 +5,40 @@
 <head>
 <link rel="stylesheet" type="text/css" href="css/bitgrid.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<%@ include file="template/head.jspf" %>
+<%@ include file="template/lmshead.jspf" %>
 <title>Insert title here</title>
 </head>
 <body>
-<%@ include file="template/header.jspf" %>
+<%@ include file="template/lmsheader.jspf" %>
 <%@ include file="template/menu.jspf" %>
-   <div id="carousel" class="gird12">
-       <img src="img/forc.jpg">
-   </div><!--carousel-->
    <div id="contents">
-       <div class="grid2">&nbsp;</div>
+   <!--*****************lms메뉴******************-->
+       <div class="grid2">
+        <div id="lmsmenu">
+            <p>강사</p>
+            <ul>
+                <li class="bigletter">출결관리</li>
+                <li>
+                    <a href="#">출석체크</a>    
+                </li>
+                <li>
+                    <a href="#">출석조회</a>    
+                </li>
+                <li class="bigletter">수강생관리</li>
+                <li>
+                    <a href="#">수강생정보</a>    
+                </li>
+                <li>
+                    <a href="#">성적입력</a>    
+                </li>
+                <li>
+                    <a href="#" class="bigletter">자료실</a>    
+                </li>
+                <li></li>
+            </ul>
+        </div>
+       </div>
+        <!--*****************lms메뉴******************-->
        <div  id="content" class="grid6">&nbsp;
        <!--*************content start****************-->
        <img src="img/capture.PNG">
@@ -23,7 +46,9 @@
 <%@ include file="template/footer.jspf" %>
 </body>
 </html>
-<!-- 
+<!--
+-#lmsmenu사용중
+-.bigletter는 글씨크기조절용입니다 .logo는 lmslogo사이즈 조절용이예요.
 -1번라인의 charset, pageEncoding 7번라인의 charset모두 utf-8로 맞춰주세요.
 -3번의 doctype도 다지우고 위처럼 html만 남겨주세요.
 -content내부에 content와 sidebar로 나눔 ->content에 작업하면됩니다.
