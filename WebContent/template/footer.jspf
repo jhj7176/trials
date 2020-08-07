@@ -8,6 +8,7 @@
            <button id="login">로그인</button>
            <button id="createaccount">회원가입</button>
            <button id="gotolms">LMS system</button>
+           <p><a href="#">아이디/비밀번호 찾기</a></p>
        </div><!--signin-->
        <div id="campus">
         <p id="campustitle">
