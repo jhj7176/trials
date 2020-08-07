@@ -34,7 +34,6 @@ public class AttendanceDao {
 			pstmt=conn.prepareStatement(sql);
 			rs=pstmt.executeQuery();
 			while(rs.next()) {
-				
 				list.add(new AttendanceDto(rs.getDate("nalja"),rs.getInt("num"),rs.getString("state")));
 			}
 		}finally {
@@ -49,19 +48,28 @@ public class AttendanceDao {
 	public int insertAll(Date nalja,int num,String state) throws SQLException{
 		String sql="insert into attendance values (?,?,?)";
 		try{
-			
 			pstmt=conn.prepareStatement(sql);
 			pstmt.setDate(1, nalja);
 			pstmt.setInt(2, num);
 			pstmt.setString(3, state);
-			
-			
-			
 			return pstmt.executeUpdate();
 		}finally{
 			if(pstmt!=null)pstmt.close();
 			if(conn!=null)conn.close();
 		}
+	}
+	
+	public int selectDate(Date nalja1,Date nalja2) throws SQLException{
+		String sql="select * from attendance where date ? between ?";
+			try{
+				pstmt=conn.prepareStatement(sql);
+				pstmt.setDate(1, nalja1);
+				pstmt.setDate(2, nalja2);
+				return pstmt.executeUpdate();
+			}finally{
+				if(pstmt!=null)pstmt.close();
+				if(conn!=null)conn.close();
+			}
 	}
 	
 }
