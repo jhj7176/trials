@@ -3,6 +3,12 @@ package com.bitjeju.teacher.att.model;
 import java.sql.Date;
 
 public class AttendanceDto {
+	@Override
+	public String toString() {
+		return "AttendanceDto [nalja=" + nalja + ", num=" + num + ", name="
+				+ name + ", state=" + state + "]";
+	}
+
 	private Date nalja;
 	private int num;
 	private String name;

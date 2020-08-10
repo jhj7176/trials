@@ -28,7 +28,6 @@ create table member(						--회원테이블
 	num number primary key, 				--회원번호
 	id_email varchar2(50) unique not null,  --이메일을 아이디로씀
 	name varchar2(15),						--회원이름
-	dept varchar2(20) default '일반회원',		--회원명
 	lvl number(1) default 1,				--등급
 	password varchar2(15) not null, 		--비밀번호 영문+숫자조합
 	phone number,							--전화번호
@@ -98,7 +97,6 @@ create table board2(									--기본적인 게시판 테이블
 	wtime date,
 	content varchar2(3000),
 	ref number,
-	serial number,
 	lev	number,
 	filename varchar2(255)
 );
