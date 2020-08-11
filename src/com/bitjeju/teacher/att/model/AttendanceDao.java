@@ -128,10 +128,11 @@ public class AttendanceDao {
 		PreparedStatement pstmt=null;
 		try{
 			pstmt=conn.prepareStatement(sql);
-			pstmt.setInt(1, num);
-			pstmt.setDate(2, nalja);
-			pstmt.setString(3, state);
+			pstmt.setString(1, state);
+			pstmt.setInt(2, num);
+			pstmt.setDate(3, nalja);
 			result=pstmt.executeUpdate();
+			System.out.println(result);
 		}finally{
 			if(pstmt!=null)pstmt.close();
 			if(conn!=null)conn.close();

@@ -1,13 +1,9 @@
 package com.bitjeju.member;
 
 public class MemberDto {
-	private int num;
-	private String id_email;
-	private String name;
-	private int lvl;
-	private String password;
-	private int phone;
-	private String lecture;
+	private String id_email, name, dept, password, lecture;
+	private int num, lvl, phone;
+	private int rownum;
 	
 	public MemberDto() {}
 	
@@ -17,64 +13,98 @@ public class MemberDto {
 		this.name = name;
 	}
 
-	public MemberDto(int num, String id_email, String name, int lvl,
-			String password, int phone, String lecture) {
+	public MemberDto(String id_email, String name, String dept,
+			String password, String lecture, int num, int lvl, int phone,
+			int rownum) {
 		super();
-		this.num = num;
 		this.id_email = id_email;
 		this.name = name;
-		this.lvl = lvl;
+		this.dept = dept;
 		this.password = password;
-		this.phone = phone;
 		this.lecture = lecture;
-	}
-	
-	public int getNum() {
-		return num;
-	}
-	public void setNum(int num) {
 		this.num = num;
+		this.lvl = lvl;
+		this.phone = phone;
+		this.rownum = rownum;
 	}
+
 	public String getId_email() {
 		return id_email;
 	}
+
 	public void setId_email(String id_email) {
 		this.id_email = id_email;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getLvl() {
-		return lvl;
+
+	public String getDept() {
+		return dept;
 	}
-	public void setLvl(int lvl) {
-		this.lvl = lvl;
+
+	public void setDept(String dept) {
+		this.dept = dept;
 	}
+
 	public String getPassword() {
 		return password;
 	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public int getPhone() {
-		return phone;
-	}
-	public void setPhone(int phone) {
-		this.phone = phone;
-	}
+
 	public String getLecture() {
 		return lecture;
 	}
+
 	public void setLecture(String lecture) {
 		this.lecture = lecture;
 	}
+
+	public int getNum() {
+		return num;
+	}
+
+	public void setNum(int num) {
+		this.num = num;
+	}
+
+	public int getLvl() {
+		return lvl;
+	}
+
+	public void setLvl(int lvl) {
+		this.lvl = lvl;
+	}
+
+	public int getPhone() {
+		return phone;
+	}
+
+	public void setPhone(int phone) {
+		this.phone = phone;
+	}
+
+	public int getRownum() {
+		return rownum;
+	}
+
+	public void setRownum(int rownum) {
+		this.rownum = rownum;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + ((dept == null) ? 0 : dept.hashCode());
 		result = prime * result
 				+ ((id_email == null) ? 0 : id_email.hashCode());
 		result = prime * result + ((lecture == null) ? 0 : lecture.hashCode());
@@ -84,8 +114,10 @@ public class MemberDto {
 		result = prime * result
 				+ ((password == null) ? 0 : password.hashCode());
 		result = prime * result + phone;
+		result = prime * result + rownum;
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -95,6 +127,11 @@ public class MemberDto {
 		if (getClass() != obj.getClass())
 			return false;
 		MemberDto other = (MemberDto) obj;
+		if (dept == null) {
+			if (other.dept != null)
+				return false;
+		} else if (!dept.equals(other.dept))
+			return false;
 		if (id_email == null) {
 			if (other.id_email != null)
 				return false;
@@ -121,13 +158,17 @@ public class MemberDto {
 			return false;
 		if (phone != other.phone)
 			return false;
+		if (rownum != other.rownum)
+			return false;
 		return true;
 	}
+
 	@Override
 	public String toString() {
-		return "memberDto [num=" + num + ", id_email=" + id_email + ", name="
-				+ name + ", lvl=" + lvl + ", password=" + password + ", phone="
-				+ phone + ", lecture=" + lecture + "]";
+		return "MemberDto [id_email=" + id_email + ", name=" + name + ", dept="
+				+ dept + ", password=" + password + ", lecture=" + lecture
+				+ ", num=" + num + ", lvl=" + lvl + ", phone=" + phone
+				+ ", rownum=" + rownum + "]";
 	}
 	
 }

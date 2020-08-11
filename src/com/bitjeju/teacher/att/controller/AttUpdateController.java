@@ -18,8 +18,8 @@ import com.bitjeju.teacher.att.model.AttendanceDto;
 public class AttUpdateController extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("utf-8");
 		int num = Integer.parseInt(request.getParameter("num"));
-//		System.out.println(request.getParameter("nalja"));
 		Date nalja = Date.valueOf(request.getParameter("nalja"));
 		AttendanceDto bean = null;
 		try {
@@ -33,8 +33,8 @@ public class AttUpdateController extends HttpServlet {
 	}
 	
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException {
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)	throws ServletException, IOException {
+		req.setCharacterEncoding("utf-8");
 		int num=Integer.parseInt(req.getParameter("num"));
 		Date nalja = Date.valueOf(req.getParameter("nalja"));
 		String state=req.getParameter("state");
@@ -44,6 +44,7 @@ public class AttUpdateController extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		req.getRequestDispatcher("teacherAttUpdateTemp.jsp").forward(req, resp);
 	}
 
 }

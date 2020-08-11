@@ -32,7 +32,6 @@ create table member(						--회원테이블
 	password varchar2(15) not null, 		--비밀번호 영문+숫자조합
 	phone number,							--전화번호
 	lecture varchar2(30),					--강좌명 
-	foreign key(dept) references bitjejudept(dept) on delete cascade,
 	foreign key(lvl) references bitjejudept(lvl) on delete cascade
 );
 

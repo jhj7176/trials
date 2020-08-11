@@ -7,10 +7,14 @@ create table attendance( --출석테이블
 	foreign key(num) references member(num) on delete cascade --foreign key지정. member테이블 num참조
 );
 
+select * from ATTENDANCE;
+
 insert into attendance values('2020-08-04',6666,'출석');
 insert into attendance values('2020-08-04',7777,'출석');
 insert into attendance values('2020-08-04',8888,'결석');
 
 commit;
+
+delete from ATTENDANCE;
 
 select * from attendance;

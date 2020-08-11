@@ -13,31 +13,26 @@
    <!--*****************lms메뉴******************-->
        <div class="grid2">
         <div id="lmsmenu">
-            <p>강사</p>
+            <p>수강생</p>
             <ul>
-                <li class="bigletter">출결관리</li>
-                <li>
-                    <a href="lmsteacherattendance.bit">출석체크</a>    
+                <li class="bigletter">
+                    <a href="#">성적조회</a>    
                 </li>
-                <li>
-                    <a href="lmsteacherattlist.bit">출석조회</a>    
+                <li class="bigletter">
+                    <a href="#">출결조회</a>    
                 </li>
-                <li class="bigletter">수강생관리</li>
-                <li>
-                    <a href="lmsteacherstulist.bit">수강생정보</a>    
+                <li class="bigletter">
+                    <a href="#">수강정보</a>    
                 </li>
-                <li>
-                    <a href="lmsteacherstugrade.bit">성적입력</a>    
-                </li>
-                <li>
-                    <a href="#" class="bigletter">자료실</a>    
+                <li class="bigletter">
+                    <a href="" class="bigletter">자료실</a>    
                 </li>
                 <li></li>
             </ul>
         </div>
        </div>
         <!--*****************lms메뉴******************-->
-       <div  id="content" class="grid6">
+       <div  id="content" class="grid6">&nbsp;
        <!--*************content start****************-->
        <img src="img/capture.PNG">
        <!--*************content end******************-->

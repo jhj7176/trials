@@ -19,6 +19,10 @@ insert into member values (3333, 'staff@email.com','±èÇàÁ¤',5,'password',0101234
 insert into member values (4444, 'teacher@email.com','±è¿µÁ¶',3,'password',01012341234, null);
 insert into member values (5555, 'test@email.com','±èÀÏ¹İ',1,'password',01012341234, null);
 
-insert into member values (6666, 'text1@email.com','Ã¶¼ö',2,'password',01012341234,'JAVA');
-insert into member values (7777, 'text2@email.com','¿µÈñ',2,'password',01012341234,'JAVA');
-insert into member values (8888, 'text3@email.com','Â¯±¸',2,'password',01012341234,'JAVA');
+insert into member values (6666, 'text1@email.com','Ã¶¼ö',2,'password',01012341234,'»ê¾÷±â»çÃëµæ°úÁ¤A');
+insert into member values (7777, 'text2@email.com','¿µÈñ',2,'password',01012341234,'»ê¾÷±â»çÃëµæ°úÁ¤A');
+insert into member values (8888, 'text3@email.com','Â¯±¸',2,'password',01012341234,'»ê¾÷±â»çÃëµæ°úÁ¤A');
+
+commit
+
+delete from member;
